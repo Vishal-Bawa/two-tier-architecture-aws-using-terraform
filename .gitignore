@@ -1,0 +1,23 @@
+# Terraform state files (contains infrastructure state & secrets)
+terraform.tfstate
+terraform.tfstate.backup
+
+# Terraform variable files (often contain sensitive data)
+*.tfvars
+secret.tfvars
+
+# Terraform cache and lock files
+.terraform/
+.terraform.lock.hcl
+
+# Logs, temp files, and backup files
+*.log
+*.bak
+*.tmp
+*.swp
+
+# User-specific files (VS Code, JetBrains, etc.)
+.vscode/
+.idea/
+.DS_Store
+
