@@ -1,88 +1,83 @@
 variable "region" {
-  description = "Value for region"
+  default = "ca-central-1"
 }
 
 variable "vpc-cidr" {
-    description = "Value for VPC CIDR block"
+  default = "10.0.0.0/16"
 }
 
 variable "vpc-name" {
-    description = "Name for VPC"
+  default = "two-tier-vpc"
 }
 
 variable "subnet1-az" {
-    description = "Value for Subnet-1 availability zone"
-}
-
-variable "subnet2-az" {
-    description = "Value for Subnet-2 availability zone"
+  default = "ca-central-1a"
 }
 
 variable "pub-subnet1-cidr" {
-    description = "Value for public Subnet-1 CIDR block"
+  default = "10.0.0.0/24"
+}
+
+variable "subnet2-az" {
+  default = "ca-central-1b"
 }
 
 variable "pub-subnet2-cidr" {
-    description = "Value for public Subnet-2 CIDR block"
+  default = "10.0.1.0/24"
 }
 
 variable "ig-name" {
-    description = "Name for Internet gateway"
+  default = "two-tier-ig"
 }
 
 variable "pub-rt-name" {
-    description = "Name for public route table"
+  default = "two-tier-pub-rt"
 }
 
 variable "pri-subnet1-cidr" {
-    description = "Value for private Subnet-1 CIDR block"
+  default = "10.0.2.0/24"
 }
 
 variable "pri-subnet2-cidr" {
-    description = "Value for private Subnet-2 CIDR block"
-}
-
-
-variable "ami-id" {
-    description = "Value for ami-id"
-}
-
-variable "instance-type" {
-    description = "Value for instance type"
+  default = "10.0.3.0/24"
 }
 
 variable "db-subnet" {
-  description = "Name for db subnet group"
-}
-
-variable "lb-sg-name" {
-   description = "Name for Load balancer Security group"
-}
-
-variable "lb-name" {
-   description = "Name for Load Balancer"
+  default = "two-tier-db-sub-grp"
 }
 
 variable "sg-name" {
-   description = "Name for Security group"
+  default = "two-tier-sg"
+}
+
+variable "lb-sg-name" {
+  default = "two-tier-lb-sg"
+}
+
+variable "lb-name" {
+  default = "two-tier-alb"
+}
+
+variable "ami-id" {
+  default = "ami-08355844f8bc94f55"
+}
+
+variable "instance-type" {
+  default = "t2.micro"
 }
 
 variable "tg-name" {
-   description = "Name for Target group"
-}
-
-variable "db-username" {
-   description = "Username for db instance"
-}
-
-variable "db-password" {
-   description = "Password for db instance"
+  default = "two-tier-tg"
 }
 
 variable "db-sg-name" {
-    description = "Name for db security group"
+  default = "two-tier-db-sg"
 }
 
 variable "key-name" {
-    description = "value for key-name"
+  default = "vishal-key"
+}
+
+variable "db-username" {
+  default = "awstier"
 }
